@@ -32,15 +32,6 @@ includeTemplate('header');
 
 
 <div class="container-fluid">
-    <?php 
-        if($resultado){
-            $mensaje = mostrarNotificacion( intval( $resultado ) );
-
-            if($mensaje){?>
-                <h3 class="h3 mb-2 text-gray-800"><?php echo s($mensaje); ?></h3>
-            <?php } 
-        } 
-    ?>
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
@@ -109,8 +100,28 @@ includeTemplate('header');
             </div>
         </div>
     </div>
-
 </div>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Verificar el valor de $alerta y mostrar la alerta correspondiente
+        <?php
+        if($resultado){
+
+            $mensaje = mostrarNotificacion( intval( $resultado ) );
+
+            if ($mensaje == true) {
+                echo "Swal.fire('¡Formulario enviado!', '  Blog " . s($mensaje) . " ', 'success').then(function() {
+                    window.location.href = 'visualizar.php';
+                });";
+            } else if ($alerta === false) {
+                echo "Swal.fire('Error al enviar el formulario', 'No se ha podido enviar el formulario. Por favor, intenta nuevamente.', 'error');";
+            }
+        }
+        ?>
+    });
+</script>
 
 <?php
 includeTemplate('footer');

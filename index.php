@@ -61,7 +61,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link rel="icon" type="image/png" href="assets/images/icons/favicon.ico" />
+	<!-- <link rel="icon" type="image/x-icon"  href="favicon.ico" /> -->
+	<link rel="icon" type="image/png" href="favicon.png" />
 	<link rel="stylesheet" type="text/css" href="assets/vend/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/vend/animate.css">
 	<link rel="stylesheet" type="text/css" href="assets/vend/hamburgers.min.css">

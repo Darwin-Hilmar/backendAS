@@ -64,7 +64,15 @@
                 <div class="col-lg-12">
                 <?php foreach($errores as $error): ?>
                     <div class="error_tls">
-                        <?php echo $error; ?>
+                        
+                        <div class="my-2"></div>
+                        <a class="btn btn-danger btn-icon-split d-flex align-items-center justify-content-start mr-5 ml-5">
+                            <span class="icon text-white-50">
+                                <i class="fas fa-exclamation-triangle"></i>
+                            </span>
+                            <span class="text"><?php echo $error; ?></span>
+                        </a>
+
                     </div>
                 <?php endforeach; ?>
                     <div class="p-5">
