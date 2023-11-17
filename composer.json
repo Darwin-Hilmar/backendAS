@@ -1,0 +1,20 @@
+{
+    "name": "user/equilibrio",
+    "description": "Proyecto equilibrio",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "App\\": "./classes"
+        }
+    },
+    "authors": [
+        {
+            "name": "Darwin-Hilmar",
+            "email": "113932832+Darwin-Hilmar@users.noreply.github.com"
+        }
+    ],
+    "require": {
+        "intervention/image": "^2.7",
+        "vlucas/phpdotenv": "^5.5"
+    }
+}
